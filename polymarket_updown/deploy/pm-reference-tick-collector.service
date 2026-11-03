@@ -1,0 +1,20 @@
+[Unit]
+Description=Polymarket independent Coinbase + Kraken BTC/ETH USD tick collector
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/updown
+EnvironmentFile=-/opt/updown/.env
+ExecStart=/opt/updown/.venv/bin/python /opt/updown/polymarket_updown/collectors/pm_reference_tick_collector.py
+Restart=always
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=15
+StandardOutput=append:./logs/pm_reference_tick_collector.log
+StandardError=append:./logs/pm_reference_tick_collector.log
+
+[Install]
+WantedBy=multi-user.target

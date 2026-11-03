@@ -1,0 +1,11 @@
+requests
+pandas
+pandas_ta_classic
+psycopg2-binary
+sqlalchemy
+python-dotenv
+eth-account
+polymarket-client==0.1.0b16
+web3
+pandas_ta
+websockets

@@ -1,0 +1,20 @@
+[Unit]
+Description=Binance 5-min Continuation Monitor (stake/accuracy tracking)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/updown
+EnvironmentFile=-/opt/updown/.env
+ExecStart=/opt/updown/.venv/bin/python3 /opt/updown/binance_updown/binance_5min_stake_alert_monitor.py
+Restart=always
+RestartSec=10
+KillMode=control-group
+TimeoutStopSec=15
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
