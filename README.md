@@ -15,6 +15,11 @@ Neither project is running, and neither is being maintained.
 - Trading can lose all of your capital. Check the rules of each venue and your jurisdiction before using any of this.
 - Nothing here is financial advice.
 
+## Disclaimer
+This is a research project only. It is not investment advice, an investment advisory service, or an offer or solicitation to buy or sell any financial instrument or digital asset.
+Pulse Labs Limited (xPulze) does not hold or manage any client assets, does not trade on behalf of clients, and does not give investment advice.
+The code is provided as is, under the MIT licence, without any warranty. You are solely responsible for any use of it.
+
 ## Setup
 ```
 python3 -m venv .venv && . .venv/bin/activate
